@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="helang.love@qq.com">
+    <title>玩具网</title>
+
+    <!--导航栏--->
+    <link rel="stylesheet" href="css/helang.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js"></script>
+    <!--jquery-->
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/index.css"/>
+    <script src="js/jquery-1.7.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <!--企业动态-->
+    <script src="js/jquery-ui-1.8.6.core.widget.js"></script>
+    <script src="js/jqueryui.bannerize.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('#banners').bannerize({
+                shuffle: 1,
+                interval: "5"
+            });
+            $(".ui-line").hover(function(){
+                $(this).addClass("ui-line-hover");
+                $(this).find(".ui-bnnerp").addClass("ui-bnnerp-hover");
+            },function(){
+                $(this).removeClass("ui-line-hover");
+                $(this).find(".ui-bnnerp").removeClass("ui-bnnerp-hover");
+            });
+        });
+    </script>
+    <style type="text/css">
+        /*---------第一行-------------*/
+        #hello_font{font-size: 16px;color: slategray;text-align: center;line-height: 30px}
+        .first_font{font-size: 16px;color: white;text-align: center;line-height: 30px}
+        .button_css{background-color: #258aff;color: white;border: 1px solid transparent;font-size: 16px}
+        .bian_se:hover{color: white;text-decoration: none}
+        .color:hover{background-color: #ff9495}
+        .info_box{margin: 100px auto 0 auto;width: 400px;background-color: #ffffff;color: #333333;padding:0 0 0 30px;}
+        .info_box>li{padding: 15px 0;font-size: 14px;border-top: #e5e5e5 dashed 1px;}
+        .info_box>li:first-child{list-style: none;font-size: 16px;color: #FD463E;border-top: none;font-weight: bold;}
+        .info_box>li:last-child{list-style: none;font-size: 12px;color: #999999;}
+        /*---------第二行-------------*/
+        .sec_div>span{font-size: 24px;color: #ff20f2;text-shadow: 1px 2px black}
+        .sec_img{height: 100px;width: 100px;border-radius: 50px}
+        .search_border{border:2px solid #258aff;position: absolute;top: 30px;}
+        .search_font{position: relative;top: 30px;right: 10px}      /*---------控制搜索栏高度-------------*/
+        .search_img{height: 30px;width: 30px;position: absolute;font-size: 18px;top: 10px;left: 5px;color: #1e74ff;}
+        .input_button{height: 38px;background-color: #258aff;width: 115px;border: 2px solid #258aff;color: white;font-size: 18px;font-weight: bolder;position: absolute;right: -2px;top: -1px;}
+        .input_style{height: 34px;width: 450px;border: 1px solid transparent;position: absolute;left: 30px;outline: none;-webkit-tap-highlight-color: transparent;}
+        .sec_font{font-size: 35px;font-weight: bolder;text-align: center;line-height: 100px;color: red;text-shadow: 2px 3px #18ff02}
+        /*---------第三行轮播图-------------*/
+        .third_div{border: 2px solid dodgerblue}
+        .lbt_img{width:1169px;height: 300px}
+        .swiper-size{width: 100%;height: 100%}
+        /*---------品牌系列图片-------------*/
+        .forth_div{border: 1px solid orange;margin-top: 5px}
+        #anb>span{font-size: 24px;font-weight: bolder}
+        #anb>em{font-size: 20px;color: darkgrey}
+
+        .forth_img{width:370px;height: 280px;border: 1px solid darkgrey;position: relative;overflow: hidden;float: left;margin-top: 50px;margin-right: 10px;margin-left: -2px}
+        .img_size{width: 100%;height: 100%}
+        .forth_font{width:370px;height:50px;background-color: deepskyblue;position: absolute; bottom: -60px;transition: 0.5s;font-size: 20px}
+        .forth_font>a{color: white;text-align: center;line-height:50px;font-weight: bolder;text-decoration: none;position: relative;left: 150px}
+        .forth_img:hover .forth_font{bottom: 0}
+
+        .other_forth{width: 745px;height: 280px;border: 1px solid darkgrey;float: left;margin-top: 50px;position:relative;margin-right: 10px;margin-left: 5px;overflow: hidden}
+        .other_font{width:745px;height:50px;background-color: red;position: absolute; bottom: -60px;transition: 0.5s;font-size: 20px}
+        .other_font>a{color: white;text-align: center;line-height:50px;font-weight: bolder;text-decoration: none;position: relative;left: 350px}
+        .other_forth:hover .other_font{bottom: 0}
+        /*---------玩具资讯-------------*/
+        .fifth_div{border: 1px solid orange;margin-top: 5px}
+        #anc{font-size: 24px;font-weight: bolder}
+        .fifth_news{border:1px dashed grey;height: 150px;margin-top: 5px}
+        /*---------结尾栏-------------*/
+        .last_style{height: 300px;background-color: #8c8c8c;margin-top: 20px}
+        .middle_div_one{margin-top: 50px}
+        .middle_div_one a{color:white}
+        @font-face {
+          font-family: 'ana_font';
+          src: url('font/font_wq8k6nff9b/iconfont.eot');
+          src: url('font/font_wq8k6nff9b/iconfont.eot?#iefix') format('embedded-opentype'),
+              url('font/font_wq8k6nff9b/iconfont.woff2') format('woff2'),
+              url('font/font_wq8k6nff9b/iconfont.woff') format('woff'),
+              url('font/font_wq8k6nff9b/iconfont.ttf') format('truetype'),
+              url('font/font_wq8k6nff9b/iconfont.svg#iconfont') format('svg');
+        }
+        .ana_font {
+          font-family: "ana_font" !important;
+          font-size: 20px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .font_color{color:white}
+
+       @font-face {
+          font-family: 'anb_font';
+          src: url('font/font_i5ycmarftye/iconfont.eot');
+          src: url('font/font_i5ycmarftye/iconfont.eot?#iefix') format('embedded-opentype'),
+               url('font/font_i5ycmarftye/iconfont.woff2') format('woff2'),
+               url('font/font_i5ycmarftye/iconfont.woff') format('woff'),
+               url('font/font_i5ycmarftye/iconfont.ttf') format('truetype'),
+               url('font/font_i5ycmarftye/iconfont.svg#iconfont') format('svg');
+        }
+        .anb_font {
+          font-family: "anb_font" !important;
+          font-size: 20px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+       @font-face {
+          font-family: 'anc_font';
+          src: url('font/font_cyh5dlwmdms/iconfont.eot');
+          src: url('font/font_cyh5dlwmdms/iconfont.eot?#iefix') format('embedded-opentype'),
+               url('font/font_cyh5dlwmdms/iconfont.woff2') format('woff2'),
+               url('font/font_cyh5dlwmdms/iconfont.woff') format('woff'),
+               url('font/font_cyh5dlwmdms/iconfont.ttf') format('truetype'),
+               url('font/font_cyh5dlwmdms/iconfont.svg#iconfont') format('svg');
+        }
+        .anc_font {
+          font-family: "anc_font" !important;
+          font-size: 25px;
+          font-style: normal;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+        }
+        .erwei_ma{width: 150px;height: 150px;background: url("../haha/二维码.jpg");background-size: 100% 100%;margin-top:40px}
+    </style>
+</head>
+<body style="background:url('../haha/wangyetu.jpg');">
+    <!-----------第一行------------->
+<div class="hl_nav">
+    <ul class="nav_list">
+        <li class="active">
+            <a class="nav_head" href="#">首页</a>
+        </li>
+
+        <li>
+            <a class="nav_head" href="#">产品中心</a>
+            <a class="nav_body" href="#">益智类玩具</a>
+            <a class="nav_body" href="#">小型玩具</a>
+            <a class="nav_body" href="#">休闲设施</a>
+            <a class="nav_body" href="#">卡通玩具</a>
+        </li>
+        <li>
+            <a class="nav_head" href="#">实体门店</a>
+            <a class="nav_body" href="#">地区查询</a>
+        </li>
+        <li>
+            <a class="nav_head" href="#">新闻动态</a>
+            <a class="nav_body" href="#">玩具相关</a>
+            <a class="nav_body" href="#">儿童新闻</a>
+        </li>
+        <li>
+            <a class="nav_head" href="#">专业团队</a>
+        </li>
+        <li>
+            <a class="nav_head" href="#">在线留言</a>
+        </li>
+        <li>
+            <a class="nav_head" href="#">关于我们</a>
+        </li>
+    </ul>
+</div>
+    <!-----------第二行搜索------------->
+    <div class="container" id="ana">
+        <div class="row">
+
+            <div class="col-sm-3 sec_div">
+                <img src="../haha/微笑.jpg" class="sec_img">
+                <span>沈阳玩具公司</span>
+            </div>
+            <!-----------搜索框------------>
+            <div class="col-sm-6">
+                <div>
+                    <div class="search_border search_font"style="height: 40px">    <!-----------搜索栏外框------------>
+                        <span class="glyphicon glyphicon-search search_img" aria-hidden="true"></span>
+                        <input type="text" autocomplete="off" class="input_style" placeholder="搜索玩具">
+                        <input type="submit" class="input_button" value="查找">
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-3 sec_font"><em>感谢遇见！！</em></div>
+        </div>
+    </div>
+
+    <!-----------第三行轮播图------------->
+    <div class="container third_div">
+        <div class="row">
+            <div style="float: left"class="swiper-container  lbt_img">
+
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+                        <img src="../haha/toy2.jpg" alt="" class="swiper-size">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="../haha/toy3.jpg" alt="" class="swiper-size">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="../haha/toy4.jpg" alt="" class="swiper-size">
+                    </div>
+
+                    <div class="swiper-slide">
+                        <img src="../haha/toy.jpg" alt="" class="swiper-size">
+                    </div>
+
+                </div>
+            <div id="pagination" class="swiper-pagination swiper-pagination-white"></div><!--分页器-->
+            <div class="swiper-button-prev swiper-button-black"></div><!--左按钮-->
+            <div class="swiper-button-next swiper-button-black"></div><!--右按钮-->
+            </div>
+
+
+
+
+        </div>
+    </div>
+    <!-----------品牌系列图片------------->
+    <div class="container forth_div" >
+        <div class="row" >
+            <div id="anb"><span>品牌推荐</span><em>Brand series</em></div>
+
+            <!--<div class="forth_img">-->
+                <!--<img src="../haha/saiche.jpg" class="img_size">-->
+                <!--<div class="forth_font"><a href="#">遥控飞机</a></div>-->
+            <!--</div>-->
+
+            <!--<div class="forth_img">-->
+                <!--<div class="forth_font"><a href="#">玩具机器人</a></div>-->
+            <!--</div>-->
+
+            <!--<div class="forth_img">-->
+                <!--<div class="forth_font"><a href="#"></a></div>-->
+            <!--</div>-->
+            <!--<div class="forth_img">-->
+                <!--<div class="forth_font"><a href="#">遥控飞机</a></div>-->
+            <!--</div>-->
+
+            <!--<div class="other_forth">-->
+                <!--<div class="other_font"><a href="#">遥控飞机</a></div>-->
+            <!--</div>-->
+
+
+        </div>
+    </div>
+    <!-----------企业资讯------------->
+    <div class="container fifth_div">
+        <div class="row">
+            <div id="anc">玩具资讯</div>
+                  <div class="warrper">
+
+                       <!--content-->
+                       <div class="content">
+                           <!--企业动态-->
+                           <div class="index-new w1200 mt30">
+                               <div class="indexadd mt50 mb60">
+                                   <div id="banners" class="ui-banner">
+                                       <ul class="ui-banner-slides">
+                                           <li><a href=""><img src="../haha/gougou.jpg" alt="NEW! Get Heart Smart With Essential Omega III" title="NEW! Get Heart Smart With Essential Omega III"/></a></li>
+                                           <li><a href=""><img src="../haha/mqishi.jpg" alt="NEW! Support Your Skin on a Cellular Level" title="NEW! Support Your Skin on a Cellular Level"/></a></li>
+                                           <li><a href=""><img src="../haha/tuzi.jpg" alt="NEW! Indulge in Luxury With Royal Spa" title="NEW! Indulge in Luxury With Royal Spa"/></a></li>
+                                           <li><a href=""><img src="../haha/qishi.jpg" alt="NEW! Get paid to shop with Cashback" title="NEW! Get paid to shop with Cashback"/></a></li>
+                                           <li><a href=""><img src="../haha/heihezi.jpg" alt="NEW! Radiation Protection at its Best" title="NEW! Radiation Protection at its Best"/></a></li>
+                                           <li><a href=""><img src="../haha/aoteman.jpg" alt="Unleash the Power of Isotonix Today" title="Unleash the Power of Isotonix Today"/></a></li>
+                                       </ul><!--ui-banner-slides end-->
+                                       <ul class="ui-banner-slogans">
+                                           <li class="ui-line">
+                                               <div class="ullinehover">
+                                                   <div class="ui-bnnerimg floatLeft">
+                                                       <img src="../haha/gougou.jpg" alt="" width="103"/>
+                                                   </div>
+                                                   <div class="ui-bnnerp floatRight">
+                                                       <h3 style="margin-top: 8px;">咬橡胶玩具的挑选以及使用时的注意事项</h3>
+                                                       <p>给狗狗准备咬胶玩具，可以帮助它清洁牙齿，同时也能够使狗狗锻炼牙齿的咬合力。
+                                                       </p>
+                                                   </div>
+                                               </div>
+                                           </li>
+                                           <li class="ui-line">
+                                               <div class="ullinehover">
+                                                   <div class="ui-bnnerimg floatLeft">
+                                                       <img src="../haha/mqishi.jpg" alt="" width="103"/>
+                                                   </div>
+                                                   <div class="ui-bnnerp floatRight">
+                                                       <h3 style="margin-top: 8px;">MH假面骑士X King Dark模型公布</h3>
+                                                       <p>为纪念东映第三部《假面骑士》系列特摄TV剧《假面骑士X》诞生45周年，MegaHouse推出《假面骑士X》45周年新作：UA Monsters 假面骑士X King Dark!于2019年10月发售!具体售价还未公布！
+
+                                                       </p>
+                                                   </div>
+                                               </div>
+                                           </li>
+                                           <li class="ui-line">
+                                               <div class="ullinehover">
+                                                   <div class="ui-bnnerimg floatLeft">
+                                                       <img src="../haha/tuzi.jpg" alt="" width="103"/>
+                                                   </div>
+                                                   <div class="ui-bnnerp floatRight">
+                                                       <h3 style="margin-top: 8px;">近十万人在2019STS玩具展上买买买 </h3>
+                                                       <p>潮流玩具现在到底有多火？如果你见过2019上海国际潮流玩具展（简称2019STS）的盛况，想必就能初步窥见潮玩受年轻人追捧的程度了！
+                                                       </p>
+                                                   </div>
+                                               </div>
+                                           </li>
+                                           <li class="ui-line">
+                                               <div class="ullinehover">
+                                                   <div class="ui-bnnerimg floatLeft">
+                                                       <img src="../haha/qishi.jpg" alt="" width="103"/>
+                                                   </div>
+                                                   <div class="ui-bnnerp floatRight">
+                                                       <h3 style="margin-top: 8px;">万代食玩装动外传假面骑士Zi-O ANOTHER1套装公布</h3>
+                                                       <p>万代食玩事业部门小尺寸「装动」可动系列今日(4月24日)推出「装动外传 假面骑士时王异类骑士第一弹」盒玩套装，食玩装动外传假面骑士Zi-O ANOTHER1预计2019年7月发售。
+                                                       </p>
+                                                   </div>
+                                               </div>
+                                           </li>
+                                           <li class="ui-line">
+                                               <div class="ullinehover">
+                                                   <div class="ui-bnnerimg floatLeft">
+                                                       <img src="../haha/heihezi.jpg" alt="" width="103"/>
+                                                   </div>
+                                                   <div class="ui-bnnerp floatRight">
+                                                       <h3 style="margin-top: 8px;">泡泡玛特获年轻人喜爱的十大设计新品牌</h3>
+                                                       <p>近日，泡泡玛特获评“年轻人喜爱的十大设计新品牌”，其董事长兼创始人王宁出席颁奖仪式并发表主题演讲，围绕设计的实用性与艺术性的辩证关系，并预测当下的潮流IP发展新趋势。
+                                                       </p>
+                                                   </div>
+                                               </div>
+                                           </li>
+                                           <li class="ui-line">
+                                               <div class="ullinehover">
+                                                   <div class="ui-bnnerimg floatLeft">
+                                                       <img src="../haha/aoteman.jpg" alt="" width="103"/>
+                                                   </div>
+                                                   <div class="ui-bnnerp floatRight">
+                                                       <h3 style="margin-top: 8px;">泰迦奥特曼最新剧情介绍公开</h3>
+                                                       <p>令和第一位奥特英雄泰罗奥特曼之子泰迦奥特曼特摄剧《泰迦奥特曼》最新剧情介绍公开，2019年7月6日开始放送~
+                                                       </p>
+                                                   </div>
+                                               </div>
+                                           </li>
+                                       </ul><!--ui-banner-slogans end-->
+                                   </div>
+                               </div>
+                           </div>
+                           <!--企业动态 end-->
+                       </div>
+                       <!--content end-->
+
+
+                   </div>
+
+        </div>
+    </div>
+
+    <!-----------更多详情------------->
+
+
+
+
+
+
+    <!-----------结尾栏------------->
+    <div class="container-fluid">
+        <div class="row last_style">
+            <div class="col-sm-2"></div>
+            <div class="col-sm-4 ">
+                <div class="middle_div_one">
+                    <span><a href="#">关于我们</a></span>
+                    <span class="font_color">|</span>
+                    <span><a href="#">帮助手册</a></span><span>|</span>
+                    <span><a href="#">解决方案</a></span>
+                     <span class="font_color">|</span>
+                     <span><a href="#">软件生活</a></span>
+                     <span class="font_color">|</span>
+                     <span><a href="#">新闻动态</a></span>
+                     <span class="font_color">|</span>
+                     <span><a href="#">招标信息</a></span>
+                </div>
+                <br>
+                <div>
+                    <span class="ana_font font_color">&#xe734;</span>
+                    <span style="color: white">地址: 辽宁省沈阳市和平区三好街尚观306室</span>
+                </div>
+                <br>
+                <div><span class="anb_font font_color">&#xe667;</span>
+                    <span style="color: white">邮箱: 1102940756@qq.com</span>
+                </div>
+                <div style="color: white">Copyright2019-2119 www.linjunjie.com All Rights Reserved</div>
+                <div style="color: white">ICP备案：皖ICP备2813141414号</div>
+
+
+            </div>
+            <div class="col-sm-3">
+                <div class="middle_div_one" style="color: white;font-weight: bolder">销售热线</div>
+                <div><span class="anc_font font_color">&#xe626;</span>
+                    <span style="color: white">热线电话1: 13840122136</span>
+                </div>
+                <div><span class="anc_font font_color">&#xe626;</span>
+                    <span style="color: white" >热线电话2: 25938313</span>
+                </div>
+                <div>
+                    <span style="color: white">QQ：1032603558</span>
+                </div>
+                <div>
+                    <span style="color: white">售后服务</span>
+                </div>
+                <div><span class="anc_font font_color">&#xe626;</span>
+                    <span style="color: white">024-68156555(9:00 - 17:00)</span>
+                </div>
+            </div>
+            <div class="col-sm-3">
+                <div class="erwei_ma"></div>
+                <div style="color: white;margin-left: 35px">微信扫一扫</div>
+                <div style="color: white;margin-left: 25px">免费为您服务</div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+<script type="text/javascript">
+    var mySwiper = new Swiper('.swiper-container',{
+        initialSlide:3,  //初始第几张（0开始）
+        loop: true, //循环
+        autoplay: 1000,//周期 单独给图片设定<div class="swiper-slide" data-swiper-autoplay="2000">
+        autoplayDisableOnInteraction : false,//手势后永久停止滚动 ，默认true打开，false：手势停止后继续滚动
+        speed:1000,//滚动速度
+        direction : 'horizontal',//滚动方向，水平(horizontal)或垂直(vertical)
+        pagination : '.swiper-pagination',//分页器-小圆点
+        effect : 'danchu',
+        danchu: {crossFade: true}, //淡出效果
+        prevButton:'.swiper-button-prev',//左按钮
+        nextButton:'.swiper-button-next',//右按钮
+    });
+    var arr = [
+    { img_url: "../haha/aairplane.jpg",name:"遥控飞机" },
+    { img_url: "../haha/saiche.jpg" ,name:"玩具赛车" },
+    { img_url: "../haha/buwawa.jpg" ,name:"布娃娃" },
+    { img_url: "../haha/pintu.jpg" ,name:"玩具拼图" },
+    ];
+
+
+    function creat_css(value) {
+        //创建图片div
+        var forth_img = $("<div></div>");
+        forth_img.appendTo(".forth_div");
+        forth_img.addClass("forth_img");
+        //插入图片
+        var img_one =$("<img>");
+        img_one.appendTo(forth_img);
+        img_one.addClass("img_size");   //铺满照片
+        img_one.attr("src",value.img_url);
+        //创建弹出栏的div
+        var forth_font =$("<div></div>");
+        forth_font.appendTo(forth_img);
+        forth_font.addClass("forth_font");
+        //弹出栏的文字
+        var forth_font1=$("<a href='#'></a>");
+        forth_font1.appendTo(forth_font);
+        forth_font1.text(value.name);
+    }
+               for (var k = 0; k <arr.length; k++) {
+                creat_css(arr[k]);
+               }
+    //最后的图片
+    var other_forth =$("<div></div>");
+    other_forth.appendTo(".forth_div");
+    other_forth.addClass("other_forth");
+    var img_two =$("<img>");
+    img_two.appendTo(other_forth);
+    img_two.addClass("img_size");   //铺满照片
+    img_two.attr("src","../haha/jiqiren.jpg");
+    //最后图片下边
+    var other_font =$("<div></div>");
+    other_font.appendTo(other_forth);
+    other_font.addClass("other_font");
+    //最后图片的文字
+    var forth_font_two=$("<a href='#'></a>");
+    forth_font_two.appendTo(other_font);
+    forth_font_two.text("玩具机器人");
+
+ // }
+</script>
+
+</body>
+</html>
